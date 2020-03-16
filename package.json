@@ -1,0 +1,11 @@
+{
+  "name": "bug",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "@vant/weapp": "^1.0.7"
+  },
+  "devDependencies": {
+    "miniprogram-ci": "^1.0.11"
+  }
+}
