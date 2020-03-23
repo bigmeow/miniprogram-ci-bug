@@ -35,10 +35,10 @@ h was not handled with .catch(). (rejection id: 1)
 re, promise rejections that are not handled will terminate the Node.js process with a non-zero exit
  code.
 ```
+![Image text](./error.png)
 
 ### "miniprogram-ci": "1.0.12"版本错误信息：
 
-![Image text](./error.png)
 ```
 (node:23640) UnhandledPromiseRejectionWarning: Error: ["usingComponents"]["van-icon"]: "../icon/index" not found
     at Object.throwError (C:\project\github\bug\node_modules\miniprogram-ci\dist\utils\common.js:1:274)
