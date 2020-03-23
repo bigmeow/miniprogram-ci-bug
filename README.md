@@ -14,7 +14,8 @@ npm 6.11.3
 ## 运行错误
 
 "构建npm" 步骤运行成功了，“CI上传代码“那个步骤报错了，具体错误：
-```
+### "miniprogram-ci": "1.0.11" 版本错误信息：
+``` bash
 (node:21612) UnhandledPromiseRejectionWarning: Error: ["usingComponents"]["van-icon"]: "../icon/ind
 ex" not found
     at Object.throwError (C:\project\github\bug\node_modules\miniprogram-ci\dist\utils\common.js:1:
@@ -34,8 +35,21 @@ h was not handled with .catch(). (rejection id: 1)
 re, promise rejections that are not handled will terminate the Node.js process with a non-zero exit
  code.
 ```
-![Image text](./error.png)
 
+### "miniprogram-ci": "1.0.12"版本错误信息：
+
+![Image text](./error.png)
+```
+(node:23640) UnhandledPromiseRejectionWarning: Error: ["usingComponents"]["van-icon"]: "../icon/index" not found
+    at Object.throwError (C:\project\github\bug\node_modules\miniprogram-ci\dist\utils\common.js:1:274)
+    at _checkComponentPath (C:\project\github\bug\node_modules\miniprogram-ci\dist\json\common.js:1:2120)
+    at Object.exports.checkComponentPath.t [as checkComponentPath] (C:\project\github\bug\node_modules\miniprogram-ci\dist\json\common.js:1:2535)
+    at checkComponentPath (C:\project\github\bug\node_modules\miniprogram-ci\dist\json\page\page.js:1:1537)
+    at compilePageJSON (C:\project\github\bug\node_modules\miniprogram-ci\dist\json\page\page.js:1:2249)
+(node:23640) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a
+catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:23640) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+```
 
 checkComponentPath 函数的判断逻辑有问题
 
