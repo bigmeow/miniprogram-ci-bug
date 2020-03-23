@@ -1,8 +1,15 @@
+## 重现环境
+window10 企业版 64位系统
+nodejs v10.16.3
+npm 6.11.3
+
+注意：mac os系统上没有此问题
+
 ## 重现步骤
 1. 用小程序开发者工具新建立一个项目， npm init
 2. 安装 `npm i @vant/weapp -S --production` 和 `npm i miniprogram-ci -D`
-3. 编写 build.js, 修改其中的appid和私钥，后台关闭白名单
-4. 运行命令 `node build.js`
+3. 修改项目目录下的 build.js, 修改其中的appid和私钥，后台关闭白名单
+4. 终端运行命令 `node build.js`，构建npm成功，上传失败
 
 ## 运行错误
 
@@ -27,6 +34,8 @@ h was not handled with .catch(). (rejection id: 1)
 re, promise rejections that are not handled will terminate the Node.js process with a non-zero exit
  code.
 ```
+![Image text](./error.png)
+
 
 checkComponentPath 函数的判断逻辑有问题
 
