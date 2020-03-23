@@ -6,6 +6,6 @@
     "@vant/weapp": "^1.0.7"
   },
   "devDependencies": {
-    "miniprogram-ci": "^1.0.11"
+    "miniprogram-ci": "^1.0.12"
   }
 }
